@@ -522,7 +522,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Linha brilho inferior */}
             <div className="mt-12 w-full h-[8px] bg-gradient-to-r from-transparent via-orange-600 to-transparent opacity-40"></div>
 
             {/* Créditos e social */}
