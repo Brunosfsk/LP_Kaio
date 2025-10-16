@@ -26,3 +26,15 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+/* Full-bleed: elemento ocupa 100vw dentro de contêiner centralizado */
+.full-bleed {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+

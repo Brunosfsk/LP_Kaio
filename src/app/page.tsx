@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <Image src="/logo.png" alt="Logo" width={100} height={100} />
+      <Image src="/logo_Kaio.png" alt="Logo" width={100} height={100} />
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start p-8 w-[1200px]">
         <section className="flex gap-[32px] items-center sm:items-start md:items-center p-8 h-[550px]">
           {" "}
@@ -36,7 +36,7 @@ export default function Home() {
               alt="Foto"
               width={500}
               height={500}
-              className="relative top-[-120px]"
+              className="relative top-[-60px]"
             />
           </div>
         </section>
@@ -63,9 +63,9 @@ export default function Home() {
             }}
           >
             {/* Imagem: mais à esquerda e mais para cima */}
-            <div className="absolute left-[-120] top-[-200px] z-10">
+            <div className="absolute left-[-120] top-[-120px] z-10">
               <Image
-                src="/Persona_2.png"
+                src="/Persona_2_.png"
                 alt="Kaio Dias"
                 width={550}
                 height={550}
@@ -88,21 +88,18 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* Faixa inclinada com gradiente */}
-        <div
-          className="absolute z-0"
-          style={{
-            width: "100%",
-            height: "48px",
-            top: "2203.71px",
-            left: "-1.44px",
-            transform: "rotate(3.74deg)",
-            background:
-              "linear-gradient(269.82deg, #070707 -11.09%, #FF3F00 128.11%)",
-            opacity: 1,
-          }}
-        ></div>
-        <section className="flex w-full p-8 h-[650px] mt-[100px]">
+        {/* Faixa inclinada com gradiente - full bleed */}
+        <div className="full-bleed">
+          <Image
+            src="/FITA.png"
+            alt="Kaio Dias"
+            width={1900}
+            height={550}
+            className="w-full h-auto"
+            sizes="100vw"
+          />
+        </div>
+        <section className="flex w-full p-8 h-[650px]">
           <div className="w-1/2 flex flex-col justify-center">
             <h2 className="text-white text-5xl font-bold leading-tight mb-12">
               VOCÊ JÁ SE SENTIU ASSIM?
@@ -154,6 +151,11 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <div className="flex justify-center items-center w-full">
+          <Button onClick={() => console.log("Clicou")}>
+            Quero começar minha transformação
+          </Button>
+        </div>
         <section className="flex gap-[32px] items-center w-full h-[650px] p-8">
           {/* Lado esquerdo: imagem com fundo em gradiente e cantos arredondados */}
           <div className="relative w-1/2 h-full flex items-center justify-center">
@@ -166,9 +168,9 @@ export default function Home() {
             <Image
               src="/Mulher.png"
               alt="Aluna treinando"
-              width={420}
-              height={420}
-              className="absolute left-[60px] top-[-40px]"
+              width={500}
+              height={500}
+              className="absolute left-0 top-[40px]"
             />
           </div>
 
@@ -182,8 +184,13 @@ export default function Home() {
 
             <div className="grid grid-cols-2 gap-x-10 gap-y-8">
               <div className="flex items-start gap-3">
-                <span className="flex items-center justify-center w-8 h-8 bg-orange-600 rounded-full text-white">
-                  💪
+                <span className="flex items-center justify-center w-12 h-12 bg-white text-white p-2 rounded-full">
+                  <Image
+                    src="/icon_1.png"
+                    alt="Aluna treinando"
+                    width={38}
+                    height={38}
+                  />
                 </span>
                 <div>
                   <p className="text-white font-semibold">Treinos de 30 min</p>
@@ -194,8 +201,13 @@ export default function Home() {
               </div>
 
               <div className="flex items-start gap-3">
-                <span className="flex items-center justify-center w-8 h-8 bg-orange-600 rounded-full text-white">
-                  📈
+                <span className="flex items-center justify-center w-12 h-12 bg-white text-white p-2 rounded-full">
+                  <Image
+                    src="/icon_2.png"
+                    alt="Aluna treinando"
+                    width={38}
+                    height={38}
+                  />
                 </span>
                 <div>
                   <p className="text-white font-semibold">
@@ -206,8 +218,13 @@ export default function Home() {
               </div>
 
               <div className="flex items-start gap-3">
-                <span className="flex items-center justify-center w-8 h-8 bg-orange-600 rounded-full text-white">
-                  🔥
+                <span className="flex items-center justify-center w-12 h-12 bg-white text-white p-2 rounded-full">
+                  <Image
+                    src="/icon_3.png"
+                    alt="Aluna treinando"
+                    width={38}
+                    height={38}
+                  />
                 </span>
                 <div>
                   <p className="text-white font-semibold">Motivação contínua</p>
@@ -216,8 +233,13 @@ export default function Home() {
               </div>
 
               <div className="flex items-start gap-3">
-                <span className="flex items-center justify-center w-8 h-8 bg-orange-600 rounded-full text-white">
-                  💰
+                <span className="flex items-center justify-center w-12 h-12 bg-white text-white p-2 rounded-full">
+                  <Image
+                    src="/icon_4.png"
+                    alt="Aluna treinando"
+                    width={38}
+                    height={38}
+                  />
                 </span>
                 <div>
                   <p className="text-white font-semibold">Economia</p>
@@ -259,9 +281,9 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-white/90 mt-6 max-w-[360px]">
-                  &ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam&rdquo;
+                  &ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua. Ut enim ad minim veniam&rdquo;
                 </p>
               </div>
 
@@ -281,9 +303,9 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-white/90 mt-6 max-w-[360px]">
-                  &ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam&rdquo;
+                  &ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua. Ut enim ad minim veniam&rdquo;
                 </p>
               </div>
 
@@ -303,9 +325,9 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-white/90 mt-6 max-w-[360px]">
-                  &ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam&rdquo;
+                  &ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua. Ut enim ad minim veniam&rdquo;
                 </p>
               </div>
             </div>
@@ -325,29 +347,38 @@ export default function Home() {
               {[
                 {
                   title: "avaliação +\n anamnese\n individualizada",
-                  emoji: "📏",
+                  icon: "/icon_A.png",
                 },
                 {
                   title: "Plano de treino\n atualizado\n mensalmente",
-                  emoji: "📄",
+                  icon: "/icon_B.png",
                 },
-                { title: "Suporte\n direto via\n WhatsApp", emoji: "💬" },
+                {
+                  title: "Suporte\n direto via\n WhatsApp",
+                  icon: "/icon_C.png",
+                },
                 {
                   title: "Checklist de\n hábitos\n saudáveis",
-                  emoji: "✅",
+                  icon: "/icon_D.png",
                 },
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="relative rounded-[24px] p-8 text-center"
+                  className="relative rounded-[24px] p-6 text-center w-[266px] h-[329px] overflow-hidden mx-auto"
                   style={{
                     background:
                       "linear-gradient(236deg, #FF3F00 0%, #ED3E03 100%)",
                     boxShadow: "0 0 35px rgba(237,62,3,0.45)",
                   }}
                 >
-                  <div className="flex items-center justify-center mb-6">
-                    <span className="text-5xl">{item.emoji}</span>
+                  <div className="flex items-center justify-center mb-2">
+                    <Image
+                      src={item.icon}
+                      alt={`Ícone ${idx + 1}`}
+                      width={220}
+                      height={220}
+                      className="relative top-[-30px]"
+                    />
                   </div>
                   <p className="text-white text-xl leading-[1.3] whitespace-pre-line font-semibold">
                     {item.title}
@@ -357,36 +388,34 @@ export default function Home() {
             </div>
 
             {/* Preço */}
-            <div className="w-full max-w-[1100px] text-center mx-auto">
-              <p className="text-white text-5xl font-bold">TUDO ISSO</p>
-              <p className="text-white text-5xl font-bold">POR APENAS:</p>
+            <div className="flex w-full justify-center items-center max-w-[1100px] text-center mx-auto">
+              <div className="w-full flex flex-col justify-center items-end p-4">
+                <p className="text-white text-5xl font-bold">TUDO ISSO</p>
+                <p className="text-white text-5xl font-bold">POR APENAS:</p>
+              </div>
 
-              <div className="flex items-end justify-center gap-4 mt-6">
-                <span className="text-orange-500 text-4xl font-bold">R$</span>
+              <div className="flex flex-col items-end justify-start gap-4 mt-6">
                 <span className="text-orange-500 text-[96px] leading-none font-bold">
+                  <span className="text-orange-500 text-4xl font-bold">R$</span>
                   120,00
                 </span>
-                <span className="text-orange-500 text-xl font-bold mb-3">
+                <div className="flex justify-end items-center h-[20px] w-[420px] bg-orange-600 rounded-full mx-auto p-3">
                   mensal
-                </span>
+                </div>
               </div>
-              <div className="mt-4 h-[12px] w-[420px] bg-orange-600 rounded-full mx-auto"></div>
             </div>
           </div>
         </section>
-        <div
-          className="absolute z-0"
-          style={{
-            width: "100%",
-            height: "48px",
-            top: "2203.71px",
-            left: "-1.44px",
-            transform: "rotate(3.74deg)",
-            background:
-              "linear-gradient(269.82deg, #070707 -11.09%, #FF3F00 128.11%)",
-            opacity: 1,
-          }}
-        ></div>
+        <div className="full-bleed">
+          <Image
+            src="/FITA.png"
+            alt="Kaio Dias"
+            width={1900}
+            height={550}
+            className="w-full h-auto"
+            sizes="100vw"
+          />
+        </div>
         {/* Bônus exclusivo */}
         <section className="flex gap-[32px] items-center w-full p-8 h-[650px]">
           {/* Lado esquerdo: livro estilizado com brilho */}
@@ -484,7 +513,7 @@ export default function Home() {
               <div className="w-1/2 relative h-[420px] flex items-center justify-center">
                 <div className="absolute w-[520px] h-[520px] rounded-full bg-orange-600 opacity-20 blur-[120px]"></div>
                 <Image
-                  src="/Persona_2.png"
+                  src="/Persona_1.png"
                   alt="Kaio Dias"
                   width={420}
                   height={420}
