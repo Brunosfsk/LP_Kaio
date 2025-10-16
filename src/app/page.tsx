@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <Image src="/logo_Kaio.png" alt="Logo" width={100} height={100} />
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start p-8 w-[1200px]">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start p-8 pb-0 w-[1200px]">
         <section className="flex gap-[32px] items-center sm:items-start md:items-center p-8 h-[550px]">
           {" "}
           <div className="w-1/2 flex h-full flex-col justify-center align-center">
@@ -334,7 +334,7 @@ export default function Home() {
           </div>
         </section>
         {/* Na sua inscrição, você recebe */}
-        <section className="w-full p-8">
+        <section className="w-full px-8 pt-8 pb-0">
           <div className="flex flex-col items-center w-full">
             <h2 className="text-white text-5xl font-bold text-center mb-12">
               NA SUA INSCRIÇÃO,
